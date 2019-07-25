@@ -69,6 +69,10 @@ module.exports = class extends Generator {
                     this.destinationPath('resources/config.json'),
                     answers
                 );
+                this.fs.copyTpl(
+                  this.templatePath('python/bots/request-reply/src/logs'),
+                  this.destinationPath('python/logs')
+                )
             }
             /* Install certificate */
             /*TODO add logging */
